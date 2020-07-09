@@ -1,0 +1,12 @@
+{
+  "name": "feedmeback",
+  "version": "1.0.0",
+  "description": "Feedmeback is a feedback collection application, the application allows users who want feedback from their customers to send emails requesting feedback.",
+  "main": "index.js",
+  "repository": "https://github.com/saincogt/feedmeback.git",
+  "author": "saincogt <saincogt@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "react-scripts": "^3.4.1"
+  }
+}
