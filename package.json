@@ -8,5 +8,8 @@
   "license": "MIT",
   "devDependencies": {
     "react-scripts": "^3.4.1"
+  },
+  "scripts": {
+    "start": "cd server && node index.js"
   }
 }
