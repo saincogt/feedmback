@@ -1,17 +1,27 @@
 {
-  "name": "server",
+  "name": "feedmeback",
   "version": "1.0.0",
+  "description": "Feedmeback is a feedback collection application, the application allows users who want feedback from their customers to send emails requesting feedback.",
   "main": "index.js",
-  "engines": {
-    "node": "12.13.1",
-    "yarn": "1.22.4",
-    "npm": "6.14.5"
-  },
+  "repository": "https://github.com/saincogt/feedmeback.git",
+  "author": "saincogt <saincogt@gmail.com>",
   "license": "MIT",
+  "devDependencies": {
+    "react-scripts": "^3.4.1"
+  },
   "dependencies": {
+    "concurrently": "^5.2.0",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.22",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node index --prefix server",
+    "server": "nodemon index",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   }
 }
