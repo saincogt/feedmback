@@ -11,7 +11,7 @@ module.exports = (app) => {
 	app.get(
 		'/auth/google/callback',
 		passport.authenticate('google', {
-			successRedirect: '/survey',
+			successRedirect: '/surveys',
 			failureRedirect: '/',
 			failureFlash: true
 		})
