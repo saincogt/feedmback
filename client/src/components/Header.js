@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Payments from './Payments';
 
 const Header = ({ auth }) => {
-	console.log(auth);
 	const renderContent = () => {
 		switch (auth) {
 			case null:
@@ -16,9 +16,14 @@ const Header = ({ auth }) => {
 				);
 			default:
 				return (
-					<li>
-						<a href='/api/logout'>Logout</a>
-					</li>
+					<>
+						<li>
+							<Payments />
+						</li>
+						<li>
+							<a href='/api/logout'>Logout</a>
+						</li>
+					</>
 				);
 		}
 	};
