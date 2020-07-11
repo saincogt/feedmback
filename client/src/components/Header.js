@@ -25,9 +25,9 @@ const Header = ({ auth }) => {
 	return (
 		<nav>
 			<div className='nav-wrapper'>
-				<a href='/' className='left brand-logo'>
+				<Link to={auth ? '/surveys' : '/'} className='left brand-logo'>
 					FeedMBack
-				</a>
+				</Link>
 				<ul id='nav-mobile' className='right'>
 					{renderContent()}
 				</ul>
