@@ -7,8 +7,8 @@ const Payments = ({ handleToken }) => (
 	<StripeCheckout
 		label='Pay Now'
 		name='FeedMBack'
-		billingAddress
-		shippingAddress
+		// billingAddress
+		// shippingAddress
 		stripeKey={process.env.REACT_APP_STRIPE_PK}
 		// description={`Your total is $${price}`}
 		// amount={priceForStripe}
