@@ -32,6 +32,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
