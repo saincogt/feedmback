@@ -8,7 +8,7 @@ Feedmeback is a feedback collection application, the application allows users wh
 2. Allow users to delete surveys that have been created.
 3. All users to specify the 'from' field on survey emails.
 4. Allow client side sorting of surveys.
-5. Allow surveys to be created in 'draft mode'.
+5. Allow surveys to be created in 'draft mode' (save for later).
 
 Area:
 
