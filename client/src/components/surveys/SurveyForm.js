@@ -12,7 +12,7 @@ const FIELDS = [
 	{ label: 'Recipient List', name: 'emails' }
 ];
 
-const SurveyForm = ({ handleSubmit }) => {
+const SurveyForm = ({ handleSubmit, onSurveySubmit }) => {
 	const renderFields = () => {
 		return _.map(FIELDS, ({ name, label }) => (
 			<Field
@@ -26,7 +26,7 @@ const SurveyForm = ({ handleSubmit }) => {
 	};
 	return (
 		<div>
-			<form onSubmit={handleSubmit((values) => console.log(values))}>
+			<form onSubmit={handleSubmit(onSurveySubmit)}>
 				{renderFields()}
 				<Link to='/surveys' className='red btn-flat white-text'>
 					Cancel
