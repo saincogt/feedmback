@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Typography } from 'antd';
 import { fetchSurveys } from '../actions';
+
+const { Title } = Typography;
 
 const SurveyList = ({ surveys, fetchSurveys }) => {
 	useEffect(() => {
@@ -20,14 +23,34 @@ const SurveyList = ({ surveys, fetchSurveys }) => {
 						</p>
 					</div>
 					<div className='card-action'>
-						<div>Yes: {survey.yes}</div>
-						<div>No: {survey.no}</div>
+						<div className='card-action-selection'>
+							Yes: {survey.yes}
+						</div>
+						<div className='card-action-selection'>
+							No: {survey.no}
+						</div>
 					</div>
 				</div>
 			);
 		});
 	};
-	return renderSurveys();
+	return (
+		<div>
+			<Title level={3}>My Dashboard</Title>
+			<p>
+				The surveys you have sent will be listed below along with your
+				users' reactions to the survey. You will be able to create a new
+				survey by clicking the button bottom right. Each survey will
+				cost you 1 credit.
+			</p>
+			<p>
+				* Please use following credit card to add credits for testing:
+			</p>
+			<p>4242 4242 4242 4242</p>
+			<p>01/23 CVV: 123</p>
+			{renderSurveys()}
+		</div>
+	);
 };
 const mapStateToProps = ({ surveys }) => ({ surveys });
 export default connect(mapStateToProps, { fetchSurveys })(SurveyList);

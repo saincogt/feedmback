@@ -1,9 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { Typography } from 'antd';
+import { Layout } from 'antd';
 import _ from 'lodash';
 import formFields from './formFields';
 import * as actions from '../../actions';
+
+const { Title } = Typography;
 
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
 	const reviewFields = _.map(formFields, ({ name, label }) => {
@@ -15,23 +19,25 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
 		);
 	});
 	return (
-		<div>
-			<h5>Please confirm your entries</h5>
+		<Layout className='layout'>
+			<Title level={3}>Please confirm your entries</Title>
 			{reviewFields}
-			<button
-				className='yellow darken-3 white-text btn-flat'
-				onClick={onCancel}
-			>
-				Back
-			</button>
-			<button
-				className='green white-text btn-flat right'
-				onClick={() => submitSurvey(formValues, history)}
-			>
-				Send Survey
-				<i className='material-icons right'>email</i>
-			</button>
-		</div>
+			<div className='button-group'>
+				<button
+					className='yellow darken-3 white-text btn-flat'
+					onClick={onCancel}
+				>
+					Back
+				</button>
+				<button
+					className='green white-text btn-flat right'
+					onClick={() => submitSurvey(formValues, history)}
+				>
+					Send Survey
+					<i className='material-icons right'>email</i>
+				</button>
+			</div>
+		</Layout>
 	);
 };
 

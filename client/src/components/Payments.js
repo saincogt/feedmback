@@ -5,10 +5,10 @@ import * as actions from '../actions';
 
 const Payments = ({ handleToken }) => (
 	<StripeCheckout
-		label='Pay Now'
+		label='Add Credit'
 		name='FeedMBack'
 		stripeKey={process.env.REACT_APP_STRIPE_PK}
-		// description={`Your total is $${price}`}
+		description={`$5 AUD for 5 Credits`}
 		// amount={priceForStripe}
 		currency='AUD'
 		country='Australia'

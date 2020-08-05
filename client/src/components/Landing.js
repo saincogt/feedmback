@@ -1,10 +1,21 @@
 import React from 'react';
 
 const Landing = () => (
-	<div style={{ textAlign: 'center' }}>
-		<h1>FeedMBack</h1>
-		Collect feedback from your users
-	</div>
+	<section className='landing'>
+		<div className='dark-overlay'>
+			<div className='landing-inner'>
+				<h1 className='landing-title'>FeedMBack</h1>
+				<p className='lead'>
+					Send survey emails, collect feedback from your users
+				</p>
+				<div className='buttons'>
+					<a href='/auth/google' className='btn btn-light'>
+						Login With Google
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 );
 
 export default Landing;
